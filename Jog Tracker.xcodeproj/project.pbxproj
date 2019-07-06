@@ -7,73 +7,144 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E3D826422D04E5B00E4ACC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D826322D04E5B00E4ACC0 /* AppDelegate.swift */; };
-		9E3D826622D04E5B00E4ACC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D826522D04E5B00E4ACC0 /* ViewController.swift */; };
-		9E3D826922D04E5B00E4ACC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D826722D04E5B00E4ACC0 /* Main.storyboard */; };
-		9E3D826B22D04E5D00E4ACC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D826A22D04E5D00E4ACC0 /* Assets.xcassets */; };
-		9E3D826E22D04E5D00E4ACC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D826C22D04E5D00E4ACC0 /* LaunchScreen.storyboard */; };
+		199DAC48D6C70A8D695AE223 /* Pods_Jog_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF13138497012CCFE7EA199A /* Pods_Jog_Tracker.framework */; };
+		9E3D824A22CF915600E4ACC0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D824922CF915600E4ACC0 /* AuthService.swift */; };
+		9E3D824D22CF9CEB00E4ACC0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D824C22CF9CEB00E4ACC0 /* LoginViewController.swift */; };
+		9E3D824F22CFA0B200E4ACC0 /* JogTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D824E22CFA0B200E4ACC0 /* JogTracker.swift */; };
+		9E3D825222CFA13B00E4ACC0 /* Jog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D825122CFA13B00E4ACC0 /* Jog.swift */; };
+		9E3D825422CFA5A000E4ACC0 /* JogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D825322CFA5A000E4ACC0 /* JogCell.swift */; };
+		9E3D825622CFB02900E4ACC0 /* JogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D825522CFB02900E4ACC0 /* JogService.swift */; };
+		9E99AD4722CF791A00F987EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99AD4622CF791A00F987EC /* AppDelegate.swift */; };
+		9E99AD4922CF791A00F987EC /* JogTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99AD4822CF791A00F987EC /* JogTrackerViewController.swift */; };
+		9E99AD4C22CF791A00F987EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E99AD4A22CF791A00F987EC /* Main.storyboard */; };
+		9E99AD4E22CF791E00F987EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E99AD4D22CF791E00F987EC /* Assets.xcassets */; };
+		9E99AD5122CF791E00F987EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E99AD4F22CF791E00F987EC /* LaunchScreen.storyboard */; };
+		9E99AD5C22CF8CFA00F987EC /* LetMeInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99AD5B22CF8CFA00F987EC /* LetMeInButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9E3D826022D04E5B00E4ACC0 /* Jog Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jog Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E3D826322D04E5B00E4ACC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E3D826522D04E5B00E4ACC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9E3D826822D04E5B00E4ACC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9E3D826A22D04E5D00E4ACC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9E3D826D22D04E5D00E4ACC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9E3D826F22D04E5D00E4ACC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		232EDA60A2F3E5782E942C7A /* Pods-Jog Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jog Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jog Tracker/Pods-Jog Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		609DCFC18D0B2BEA41D31418 /* Pods-Jog Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jog Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jog Tracker/Pods-Jog Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		9E3D824922CF915600E4ACC0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		9E3D824C22CF9CEB00E4ACC0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9E3D824E22CFA0B200E4ACC0 /* JogTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogTracker.swift; sourceTree = "<group>"; };
+		9E3D825122CFA13B00E4ACC0 /* Jog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jog.swift; sourceTree = "<group>"; };
+		9E3D825322CFA5A000E4ACC0 /* JogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogCell.swift; sourceTree = "<group>"; };
+		9E3D825522CFB02900E4ACC0 /* JogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogService.swift; sourceTree = "<group>"; };
+		9E99AD4322CF791A00F987EC /* Jog Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jog Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E99AD4622CF791A00F987EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E99AD4822CF791A00F987EC /* JogTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogTrackerViewController.swift; sourceTree = "<group>"; };
+		9E99AD4B22CF791A00F987EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E99AD4D22CF791E00F987EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E99AD5022CF791E00F987EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E99AD5222CF791E00F987EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E99AD5B22CF8CFA00F987EC /* LetMeInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetMeInButton.swift; sourceTree = "<group>"; };
+		EF13138497012CCFE7EA199A /* Pods_Jog_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jog_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9E3D825D22D04E5B00E4ACC0 /* Frameworks */ = {
+		9E99AD4022CF791A00F987EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				199DAC48D6C70A8D695AE223 /* Pods_Jog_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9E3D825722D04E5B00E4ACC0 = {
+		64BD9617D27293A747D1A588 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9E3D826222D04E5B00E4ACC0 /* Jog Tracker */,
-				9E3D826122D04E5B00E4ACC0 /* Products */,
+				EF13138497012CCFE7EA199A /* Pods_Jog_Tracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80DD1A66CE4202C0D5DD3EC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				609DCFC18D0B2BEA41D31418 /* Pods-Jog Tracker.debug.xcconfig */,
+				232EDA60A2F3E5782E942C7A /* Pods-Jog Tracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E3D824B22CF915A00E4ACC0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9E3D824922CF915600E4ACC0 /* AuthService.swift */,
+				9E3D825522CFB02900E4ACC0 /* JogService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9E3D825022CFA0C100E4ACC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E3D824E22CFA0B200E4ACC0 /* JogTracker.swift */,
+				9E3D825122CFA13B00E4ACC0 /* Jog.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E99AD3A22CF791A00F987EC = {
+			isa = PBXGroup;
+			children = (
+				9E99AD4522CF791A00F987EC /* Jog Tracker */,
+				9E99AD4422CF791A00F987EC /* Products */,
+				80DD1A66CE4202C0D5DD3EC3 /* Pods */,
+				64BD9617D27293A747D1A588 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		9E3D826122D04E5B00E4ACC0 /* Products */ = {
+		9E99AD4422CF791A00F987EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9E3D826022D04E5B00E4ACC0 /* Jog Tracker.app */,
+				9E99AD4322CF791A00F987EC /* Jog Tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9E3D826222D04E5B00E4ACC0 /* Jog Tracker */ = {
+		9E99AD4522CF791A00F987EC /* Jog Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				9E3D826322D04E5B00E4ACC0 /* AppDelegate.swift */,
-				9E3D826522D04E5B00E4ACC0 /* ViewController.swift */,
-				9E3D826722D04E5B00E4ACC0 /* Main.storyboard */,
-				9E3D826A22D04E5D00E4ACC0 /* Assets.xcassets */,
-				9E3D826C22D04E5D00E4ACC0 /* LaunchScreen.storyboard */,
-				9E3D826F22D04E5D00E4ACC0 /* Info.plist */,
+				9E99AD4622CF791A00F987EC /* AppDelegate.swift */,
+				9E99AD4822CF791A00F987EC /* JogTrackerViewController.swift */,
+				9E3D825022CFA0C100E4ACC0 /* Model */,
+				9E3D824C22CF9CEB00E4ACC0 /* LoginViewController.swift */,
+				9E3D824B22CF915A00E4ACC0 /* Services */,
+				9E99AD5A22CF7CC200F987EC /* View */,
+				9E99AD4A22CF791A00F987EC /* Main.storyboard */,
+				9E99AD4D22CF791E00F987EC /* Assets.xcassets */,
+				9E99AD4F22CF791E00F987EC /* LaunchScreen.storyboard */,
+				9E99AD5222CF791E00F987EC /* Info.plist */,
 			);
 			path = "Jog Tracker";
+			sourceTree = "<group>";
+		};
+		9E99AD5A22CF7CC200F987EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E99AD5B22CF8CFA00F987EC /* LetMeInButton.swift */,
+				9E3D825322CFA5A000E4ACC0 /* JogCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9E3D825F22D04E5B00E4ACC0 /* Jog Tracker */ = {
+		9E99AD4222CF791A00F987EC /* Jog Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9E3D827222D04E5D00E4ACC0 /* Build configuration list for PBXNativeTarget "Jog Tracker" */;
+			buildConfigurationList = 9E99AD5522CF791E00F987EC /* Build configuration list for PBXNativeTarget "Jog Tracker" */;
 			buildPhases = (
-				9E3D825C22D04E5B00E4ACC0 /* Sources */,
-				9E3D825D22D04E5B00E4ACC0 /* Frameworks */,
-				9E3D825E22D04E5B00E4ACC0 /* Resources */,
+				7F4A7D7E6C50AC0028E356D8 /* [CP] Check Pods Manifest.lock */,
+				9E99AD3F22CF791A00F987EC /* Sources */,
+				9E99AD4022CF791A00F987EC /* Frameworks */,
+				9E99AD4122CF791A00F987EC /* Resources */,
+				AA633446906B30F3E45B2145 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -81,25 +152,25 @@
 			);
 			name = "Jog Tracker";
 			productName = "Jog Tracker";
-			productReference = 9E3D826022D04E5B00E4ACC0 /* Jog Tracker.app */;
+			productReference = 9E99AD4322CF791A00F987EC /* Jog Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9E3D825822D04E5B00E4ACC0 /* Project object */ = {
+		9E99AD3B22CF791A00F987EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Дмитрий Болоников";
 				TargetAttributes = {
-					9E3D825F22D04E5B00E4ACC0 = {
+					9E99AD4222CF791A00F987EC = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 9E3D825B22D04E5B00E4ACC0 /* Build configuration list for PBXProject "Jog Tracker" */;
+			buildConfigurationList = 9E99AD3E22CF791A00F987EC /* Build configuration list for PBXProject "Jog Tracker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +178,102 @@
 				en,
 				Base,
 			);
-			mainGroup = 9E3D825722D04E5B00E4ACC0;
-			productRefGroup = 9E3D826122D04E5B00E4ACC0 /* Products */;
+			mainGroup = 9E99AD3A22CF791A00F987EC;
+			productRefGroup = 9E99AD4422CF791A00F987EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9E3D825F22D04E5B00E4ACC0 /* Jog Tracker */,
+				9E99AD4222CF791A00F987EC /* Jog Tracker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9E3D825E22D04E5B00E4ACC0 /* Resources */ = {
+		9E99AD4122CF791A00F987EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E3D826E22D04E5D00E4ACC0 /* LaunchScreen.storyboard in Resources */,
-				9E3D826B22D04E5D00E4ACC0 /* Assets.xcassets in Resources */,
-				9E3D826922D04E5B00E4ACC0 /* Main.storyboard in Resources */,
+				9E99AD5122CF791E00F987EC /* LaunchScreen.storyboard in Resources */,
+				9E99AD4E22CF791E00F987EC /* Assets.xcassets in Resources */,
+				9E99AD4C22CF791A00F987EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7F4A7D7E6C50AC0028E356D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Jog Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA633446906B30F3E45B2145 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Jog Tracker/Pods-Jog Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jog Tracker/Pods-Jog Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		9E3D825C22D04E5B00E4ACC0 /* Sources */ = {
+		9E99AD3F22CF791A00F987EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E3D826622D04E5B00E4ACC0 /* ViewController.swift in Sources */,
-				9E3D826422D04E5B00E4ACC0 /* AppDelegate.swift in Sources */,
+				9E3D825622CFB02900E4ACC0 /* JogService.swift in Sources */,
+				9E3D825422CFA5A000E4ACC0 /* JogCell.swift in Sources */,
+				9E99AD5C22CF8CFA00F987EC /* LetMeInButton.swift in Sources */,
+				9E3D824F22CFA0B200E4ACC0 /* JogTracker.swift in Sources */,
+				9E3D825222CFA13B00E4ACC0 /* Jog.swift in Sources */,
+				9E99AD4922CF791A00F987EC /* JogTrackerViewController.swift in Sources */,
+				9E99AD4722CF791A00F987EC /* AppDelegate.swift in Sources */,
+				9E3D824D22CF9CEB00E4ACC0 /* LoginViewController.swift in Sources */,
+				9E3D824A22CF915600E4ACC0 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9E3D826722D04E5B00E4ACC0 /* Main.storyboard */ = {
+		9E99AD4A22CF791A00F987EC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9E3D826822D04E5B00E4ACC0 /* Base */,
+				9E99AD4B22CF791A00F987EC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		9E3D826C22D04E5D00E4ACC0 /* LaunchScreen.storyboard */ = {
+		9E99AD4F22CF791E00F987EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9E3D826D22D04E5D00E4ACC0 /* Base */,
+				9E99AD5022CF791E00F987EC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +281,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9E3D827022D04E5D00E4ACC0 /* Debug */ = {
+		9E99AD5322CF791E00F987EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +342,7 @@
 			};
 			name = Debug;
 		};
-		9E3D827122D04E5D00E4ACC0 /* Release */ = {
+		9E99AD5422CF791E00F987EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,8 +397,9 @@
 			};
 			name = Release;
 		};
-		9E3D827322D04E5D00E4ACC0 /* Debug */ = {
+		9E99AD5622CF791E00F987EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 609DCFC18D0B2BEA41D31418 /* Pods-Jog Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,8 +416,9 @@
 			};
 			name = Debug;
 		};
-		9E3D827422D04E5D00E4ACC0 /* Release */ = {
+		9E99AD5722CF791E00F987EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 232EDA60A2F3E5782E942C7A /* Pods-Jog Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -317,25 +438,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9E3D825B22D04E5B00E4ACC0 /* Build configuration list for PBXProject "Jog Tracker" */ = {
+		9E99AD3E22CF791A00F987EC /* Build configuration list for PBXProject "Jog Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E3D827022D04E5D00E4ACC0 /* Debug */,
-				9E3D827122D04E5D00E4ACC0 /* Release */,
+				9E99AD5322CF791E00F987EC /* Debug */,
+				9E99AD5422CF791E00F987EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9E3D827222D04E5D00E4ACC0 /* Build configuration list for PBXNativeTarget "Jog Tracker" */ = {
+		9E99AD5522CF791E00F987EC /* Build configuration list for PBXNativeTarget "Jog Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9E3D827322D04E5D00E4ACC0 /* Debug */,
-				9E3D827422D04E5D00E4ACC0 /* Release */,
+				9E99AD5622CF791E00F987EC /* Debug */,
+				9E99AD5722CF791E00F987EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9E3D825822D04E5B00E4ACC0 /* Project object */;
+	rootObject = 9E99AD3B22CF791A00F987EC /* Project object */;
 }
