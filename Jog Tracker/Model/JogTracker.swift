@@ -12,10 +12,13 @@ struct JogTracker {
     var isLoggedIn: Bool {
         return AuthService.instance.isLoggedIn
     }
-    private(set) var jogs: [Jog]
+    var jogs: [Jog] {
+        return JogService.instance.jogs.reversed()
+    }
     
     mutating func addJog(_ jog: Jog) {
-        guard jogs.filter( { $0.uid == jog.uid } ).isEmpty else { return }
-        jogs.append(jog)
+        JogService.instance.addJog(jog: jog, completion: {_ in 
+            
+        })
     }
 }

@@ -24,9 +24,9 @@ class AuthService {
         }
     }
     
-    var authToken: String {
+    var authToken: String? {
         get {
-            return defaults.value(forKey: "authToken") as! String
+            return defaults.string(forKey: "authToken")
         }
         set {
             defaults.set(newValue, forKey: "authToken")

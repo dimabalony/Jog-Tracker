@@ -9,17 +9,30 @@
 import Foundation
 
 struct Jog {
-    let uid: String
-    let userId: Int
     let distance: Double
+    var timeSince1970: TimeInterval
+    var date: String {
+        return fmt.string(from: Date(timeIntervalSince1970: timeSince1970))
+    }
     let time: Int
-    let date: String
+    let id: Int?
+    let userId: String?
+    private let fmt: DateFormatter = {
+        let fmt = DateFormatter()
+        fmt.dateFormat = "dd.MM.yyyy"
+        return fmt
+    }()
     
-    init(uid: String = UUID().uuidString, userId: Int, distance: Double, time: Int, date: String) {
-        self.uid = uid
-        self.userId = userId
+    init?(distance: Double, time: Int, date: String) {
         self.distance = distance
         self.time = time
-        self.date = date
+        guard let date = fmt.date(from: date) else { return nil }
+        self.timeSince1970 = date.timeIntervalSince1970
+    }
+
+    init(distance: Double, time: Int, timeSince1970: TimeInterval) {
+        self.distance = distance
+        self.time = time
+        self.timeSince1970 = timeSince1970
     }
 }

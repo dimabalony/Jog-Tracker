@@ -8,21 +8,66 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class JogService {
-    let instance = JogService()
+    static let instance = JogService()
     
     var jogs = [Jog]()
     
-    func refreshJogs() {
-        //Alamofire.re
+    func refreshJogs(completion: @escaping (_ success: Bool) -> ()) {
+        Alamofire.request("https://jogtracker.herokuapp.com/api/v1/data/sync", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: HTTPComponents.bearerHeader).responseJSON { (response) in
+            guard response.result.error == nil, let data = response.data else {
+                completion(false)
+                return
+            }
+            do {
+                let json = try JSON(data: data)
+                let jogs = json["response"]["jogs"].arrayValue
+                self.jogs = []
+                for jogJSON in jogs {
+                    let distance = jogJSON["distance"].doubleValue
+                    let time = jogJSON["time"].intValue
+                    let date = jogJSON["date"].doubleValue
+                    let jog = Jog(distance: distance, time: time, timeSince1970: date)
+                    self.jogs.append(jog)
+                }
+                completion(true)
+            } catch(let exception) {
+                completion(false)
+                debugPrint(exception)
+            }
+        }
+    }
+    
+    func addJog(jog: Jog, completion: @escaping (_ success: Bool) -> ()) {
+        let body: [String: Any] = [
+            "date": jog.date,
+            "time": jog.time,
+            "distance": jog.distance
+        ]
+        Alamofire.request("https://jogtracker.herokuapp.com/api/v1/data/jog", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HTTPComponents.bearerHeader).responseJSON { (response) in
+            guard response.result.error == nil, let data = response.data else {
+                completion(false)
+                return
+            }
+            do {
+                let json = try JSON(data: data)
+                print(json)
+                completion(true)
+            } catch(let exception) {
+                completion(false)
+                debugPrint(exception)
+            }
+        }
     }
 }
 
 extension JogService {
-    struct Constants {
-        var header: [String] {
-            return ["Authorization: Bearer \(AuthService.instance.authToken)"]
+    struct HTTPComponents {
+        static var bearerHeader: [String: String] {
+            guard let authToken = AuthService.instance.authToken else { return [:] }
+            return ["Authorization": "Bearer \(authToken)"]
         }
     }
 }

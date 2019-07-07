@@ -25,9 +25,17 @@ class JogCell: UITableViewCell {
     
     func configureCell(date: String, speed: String, distance: String, time: String) {
         dateLabel.text = date
-        speedLabel.text = speed
-        distanceLabel.text = distance
-        timeLabel.text = time
+        speedLabel.attributedText = makeAttributedString(withBoldKey: "Speed: ", andValue: speed)
+        distanceLabel.attributedText = makeAttributedString(withBoldKey: "Distance: ", andValue: distance)
+        timeLabel.attributedText = makeAttributedString(withBoldKey: "Time: ", andValue: time)
+    }
+    
+    private func makeAttributedString(withBoldKey key: String, andValue value: String) -> NSAttributedString {
+        let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 17)]
+        let outputString = NSMutableAttributedString(string: key, attributes: attributes)
+        let valueString = NSAttributedString(string: value)
+        outputString.append(valueString)
+        return outputString
     }
 
 }

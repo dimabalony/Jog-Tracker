@@ -14,6 +14,8 @@
 		9E3D825222CFA13B00E4ACC0 /* Jog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D825122CFA13B00E4ACC0 /* Jog.swift */; };
 		9E3D825422CFA5A000E4ACC0 /* JogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D825322CFA5A000E4ACC0 /* JogCell.swift */; };
 		9E3D825622CFB02900E4ACC0 /* JogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D825522CFB02900E4ACC0 /* JogService.swift */; };
+		9E3D827F22D1009200E4ACC0 /* JogEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D827E22D1009200E4ACC0 /* JogEditorViewController.xib */; };
+		9E3D828122D101AA00E4ACC0 /* JogEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D828022D101AA00E4ACC0 /* JogEditorViewController.swift */; };
 		9E99AD4722CF791A00F987EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99AD4622CF791A00F987EC /* AppDelegate.swift */; };
 		9E99AD4922CF791A00F987EC /* JogTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99AD4822CF791A00F987EC /* JogTrackerViewController.swift */; };
 		9E99AD4C22CF791A00F987EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E99AD4A22CF791A00F987EC /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		9E3D825122CFA13B00E4ACC0 /* Jog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jog.swift; sourceTree = "<group>"; };
 		9E3D825322CFA5A000E4ACC0 /* JogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogCell.swift; sourceTree = "<group>"; };
 		9E3D825522CFB02900E4ACC0 /* JogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogService.swift; sourceTree = "<group>"; };
+		9E3D827E22D1009200E4ACC0 /* JogEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JogEditorViewController.xib; sourceTree = "<group>"; };
+		9E3D828022D101AA00E4ACC0 /* JogEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogEditorViewController.swift; sourceTree = "<group>"; };
 		9E99AD4322CF791A00F987EC /* Jog Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jog Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E99AD4622CF791A00F987EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E99AD4822CF791A00F987EC /* JogTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogTrackerViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9E3D827722D0C83E00E4ACC0 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				9E3D827E22D1009200E4ACC0 /* JogEditorViewController.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		9E99AD3A22CF791A00F987EC = {
 			isa = PBXGroup;
 			children = (
@@ -111,9 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				9E99AD4622CF791A00F987EC /* AppDelegate.swift */,
+				9E3D827722D0C83E00E4ACC0 /* XIBs */,
 				9E99AD4822CF791A00F987EC /* JogTrackerViewController.swift */,
-				9E3D825022CFA0C100E4ACC0 /* Model */,
+				9E3D828022D101AA00E4ACC0 /* JogEditorViewController.swift */,
 				9E3D824C22CF9CEB00E4ACC0 /* LoginViewController.swift */,
+				9E3D825022CFA0C100E4ACC0 /* Model */,
 				9E3D824B22CF915A00E4ACC0 /* Services */,
 				9E99AD5A22CF7CC200F987EC /* View */,
 				9E99AD4A22CF791A00F987EC /* Main.storyboard */,
@@ -194,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E99AD5122CF791E00F987EC /* LaunchScreen.storyboard in Resources */,
+				9E3D827F22D1009200E4ACC0 /* JogEditorViewController.xib in Resources */,
 				9E99AD4E22CF791E00F987EC /* Assets.xcassets in Resources */,
 				9E99AD4C22CF791A00F987EC /* Main.storyboard in Resources */,
 			);
@@ -252,6 +267,7 @@
 				9E99AD5C22CF8CFA00F987EC /* LetMeInButton.swift in Sources */,
 				9E3D824F22CFA0B200E4ACC0 /* JogTracker.swift in Sources */,
 				9E3D825222CFA13B00E4ACC0 /* Jog.swift in Sources */,
+				9E3D828122D101AA00E4ACC0 /* JogEditorViewController.swift in Sources */,
 				9E99AD4922CF791A00F987EC /* JogTrackerViewController.swift in Sources */,
 				9E99AD4722CF791A00F987EC /* AppDelegate.swift in Sources */,
 				9E3D824D22CF9CEB00E4ACC0 /* LoginViewController.swift in Sources */,
