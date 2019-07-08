@@ -28,8 +28,10 @@ class JogService {
                 for jogJSON in jogs {
                     let distance = jogJSON["distance"].doubleValue
                     let time = jogJSON["time"].intValue
-                    let date = jogJSON["date"].doubleValue
-                    let jog = Jog(distance: distance, time: time, timeSince1970: date)
+                    let timeSince1970 = jogJSON["date"].doubleValue
+                    let userId = jogJSON["user_id"].stringValue
+                    let id = jogJSON["id"].intValue
+                    let jog = Jog(distance: distance, time: time, timeSince1970: timeSince1970, userId: userId, id: id)
                     self.jogs.append(jog)
                 }
                 completion(true)
@@ -47,6 +49,53 @@ class JogService {
             "distance": jog.distance
         ]
         Alamofire.request("https://jogtracker.herokuapp.com/api/v1/data/jog", method: .post, parameters: body, encoding: JSONEncoding.default, headers: HTTPComponents.bearerHeader).responseJSON { (response) in
+            guard response.result.error == nil, let data = response.data else {
+                completion(false)
+                return
+            }
+            do {
+                let json = try JSON(data: data)
+                print(json)
+                completion(true)
+            } catch(let exception) {
+                completion(false)
+                debugPrint(exception)
+            }
+        }
+    }
+    
+    func editJog(jog: Jog, completion: @escaping (_ success: Bool) -> ()) {
+        guard let jogId = jog.id, let userId = jog.userId else { return }
+        let body: [String: Any] = [
+            "date": jog.date,
+            "time": jog.time,
+            "distance": jog.distance,
+            "jog_id": jogId,
+            "user_id": userId
+        ]
+        Alamofire.request("https://jogtracker.herokuapp.com/api/v1/data/jog", method: .put, parameters: body, encoding: JSONEncoding.default, headers: HTTPComponents.bearerHeader).responseJSON { (response) in
+            guard response.result.error == nil, let data = response.data else {
+                completion(false)
+                return
+            }
+            do {
+                let json = try JSON(data: data)
+                print(json)
+                completion(true)
+            } catch(let exception) {
+                completion(false)
+                debugPrint(exception)
+            }
+        }
+    }
+    
+    func deleteJog(jog: Jog, completion: @escaping (_ success: Bool) -> ()) {
+        guard let jogId = jog.id, let userId = jog.userId else { return }
+        let body: [String: Any] = [
+            "jog_id": jogId,
+            "user_id": userId
+        ]
+        Alamofire.request("https://jogtracker.herokuapp.com/api/v1/data/jog", method: .delete, parameters: body, encoding: JSONEncoding.default, headers: HTTPComponents.bearerHeader).responseJSON { (response) in
             guard response.result.error == nil, let data = response.data else {
                 completion(false)
                 return

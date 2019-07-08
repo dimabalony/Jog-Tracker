@@ -16,9 +16,31 @@ struct JogTracker {
         return JogService.instance.jogs.reversed()
     }
     
-    mutating func addJog(_ jog: Jog) {
-        JogService.instance.addJog(jog: jog, completion: {_ in 
-            
-        })
+    func addJog(jog: Jog) {
+        JogService.instance.addJog(jog: jog) { (success) in
+            guard success else { return }
+            self.updateJogs()
+        }
+    }
+    
+    func editJog(jog: Jog) {
+        JogService.instance.editJog(jog: jog) { (success) in
+            guard success else { return }
+            self.updateJogs()
+        }
+    }
+    
+    func deleteJog(jog: Jog) {
+        JogService.instance.deleteJog(jog: jog) { (success) in
+            guard success else { return }
+            self.updateJogs()
+        }
+    }
+    
+    func updateJogs() {
+        JogService.instance.refreshJogs { (success) in
+            guard success else { return }
+            NotificationCenter.default.post(name: .updateJogsTable, object: nil)
+        }
     }
 }

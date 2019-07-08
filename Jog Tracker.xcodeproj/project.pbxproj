@@ -16,6 +16,7 @@
 		9E3D825622CFB02900E4ACC0 /* JogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D825522CFB02900E4ACC0 /* JogService.swift */; };
 		9E3D827F22D1009200E4ACC0 /* JogEditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3D827E22D1009200E4ACC0 /* JogEditorViewController.xib */; };
 		9E3D828122D101AA00E4ACC0 /* JogEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D828022D101AA00E4ACC0 /* JogEditorViewController.swift */; };
+		9E3D829922D37DCB00E4ACC0 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D829822D37DCA00E4ACC0 /* NotificationName.swift */; };
 		9E99AD4722CF791A00F987EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99AD4622CF791A00F987EC /* AppDelegate.swift */; };
 		9E99AD4922CF791A00F987EC /* JogTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E99AD4822CF791A00F987EC /* JogTrackerViewController.swift */; };
 		9E99AD4C22CF791A00F987EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E99AD4A22CF791A00F987EC /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		9E3D825522CFB02900E4ACC0 /* JogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogService.swift; sourceTree = "<group>"; };
 		9E3D827E22D1009200E4ACC0 /* JogEditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JogEditorViewController.xib; sourceTree = "<group>"; };
 		9E3D828022D101AA00E4ACC0 /* JogEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogEditorViewController.swift; sourceTree = "<group>"; };
+		9E3D829822D37DCA00E4ACC0 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		9E99AD4322CF791A00F987EC /* Jog Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jog Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E99AD4622CF791A00F987EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E99AD4822CF791A00F987EC /* JogTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JogTrackerViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = XIBs;
 			sourceTree = "<group>";
 		};
+		9E3D829722D37DA700E4ACC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E3D829822D37DCA00E4ACC0 /* NotificationName.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9E99AD3A22CF791A00F987EC = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +132,7 @@
 		9E99AD4522CF791A00F987EC /* Jog Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				9E3D829722D37DA700E4ACC0 /* Extensions */,
 				9E99AD4622CF791A00F987EC /* AppDelegate.swift */,
 				9E3D827722D0C83E00E4ACC0 /* XIBs */,
 				9E99AD4822CF791A00F987EC /* JogTrackerViewController.swift */,
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E3D825622CFB02900E4ACC0 /* JogService.swift in Sources */,
+				9E3D829922D37DCB00E4ACC0 /* NotificationName.swift in Sources */,
 				9E3D825422CFA5A000E4ACC0 /* JogCell.swift in Sources */,
 				9E99AD5C22CF8CFA00F987EC /* LetMeInButton.swift in Sources */,
 				9E3D824F22CFA0B200E4ACC0 /* JogTracker.swift in Sources */,

@@ -13,7 +13,8 @@ class JogEditorViewController: UIViewController {
     @IBOutlet weak var distanceTextField: UITextField!
     @IBOutlet weak var timeTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
-    let completion: (_ jog: Jog) ->()
+    var jog: Jog?
+    let completion: (_ jog: Jog) -> ()
     
     init(nibName nibNameOrNil: String? = nil, bundle nibBundleOrNil: Bundle? = nil, completion: @escaping (_ jog: Jog) ->()) {
         self.completion = completion
@@ -25,7 +26,14 @@ class JogEditorViewController: UIViewController {
         self.completion = { jog in }
         super.init(coder: aDecoder)
         modalPresentationStyle = .custom
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let jog = jog {
+            distanceTextField.text = String(jog.distance)
+            timeTextField.text = String(jog.time)
+            dateTextField.text = jog.date
+        }
     }
     
     @IBAction func touchClose(_ sender: Any) {
@@ -33,8 +41,14 @@ class JogEditorViewController: UIViewController {
     }
     
     @IBAction func touchSave(_ sender: Any) {
-        guard let distanceString = distanceTextField.text, let distance = Double(distanceString), let timeString = timeTextField.text, let time = Int(timeString), let date = dateTextField.text, let jog = Jog(distance: distance, time: time, date: date) else { return }
-        completion(jog)
+        guard let distanceString = distanceTextField.text, let distance = Double(distanceString), let timeString = timeTextField.text, let time = Int(timeString), let date = dateTextField.text else { return }
+        if let jog = jog {
+            guard let editedJog = Jog(distance: distance, time: time, date: date, userId: jog.userId, id: jog.id) else { return }
+            completion(editedJog)
+        } else {
+            guard let newJog = Jog(distance: distance, time: time, date: date) else { return }
+            completion(newJog)
+        }
         dismiss(animated: true)
     }
 }
